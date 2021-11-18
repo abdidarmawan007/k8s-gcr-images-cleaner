@@ -25,5 +25,5 @@ docker push asia.gcr.io/zeus-14235464232132/cron-gcr-cleaner:v7
 kubectl apply -f cron-k8s.yaml 
 ```
 
-#### https://github.com/GoogleCloudPlatform/gcr-cleaner
+#### Source tool: https://github.com/GoogleCloudPlatform/gcr-cleaner
 
