@@ -18,8 +18,8 @@ gsutil iam ch serviceAccount:gcr-cleaner@zeus-14235464232132.iam.gserviceaccount
 ### Build Docker Images
 ```
 docker build --no-cache -t cron-gcr-cleaner .
-docker tag cron-gcr-cleaner asia.gcr.io/zeus-14235464232132/cron-gcr-cleaner:v7
-docker push asia.gcr.io/zeus-14235464232132/cron-gcr-cleaner:v7
+docker tag cron-gcr-cleaner asia.gcr.io/zeus-14235464232132/cron-gcr-cleaner:v1
+docker push asia.gcr.io/zeus-14235464232132/cron-gcr-cleaner:v1
 ```
 
 ### deploy cron k8s
