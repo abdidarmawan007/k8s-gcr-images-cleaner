@@ -15,14 +15,14 @@ gcloud iam service-accounts keys create gcr-cleaner.json \
 gsutil iam ch serviceAccount:gcr-cleaner@zeus-14235464232132.iam.gserviceaccount.com:objectCreator,objectAdmin,legacyBucketReader gs://asia.artifacts.zeus-14235464232132.appspot.com
 ```
 
-## Build Docker Images
+### Build Docker Images
 ```
 docker build --no-cache -t cron-gcr-cleaner .
 docker tag cron-gcr-cleaner asia.gcr.io/zeus-14235464232132/cron-gcr-cleaner:v7
 docker push asia.gcr.io/zeus-14235464232132/cron-gcr-cleaner:v7
 ```
 
-## deploy cron k8s
+### deploy cron k8s
 ```
 kubectl apply -f cron-k8s.yaml 
 ```
