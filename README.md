@@ -1,6 +1,6 @@
 # GCR Images cleaner with k8s cron 
 
-### Create Service via UI GCP or Terraform, Account Google Cloud + Iam Rules for support delete images recursive
+### Create Service via UI GCP or Terraform, Account Google Cloud + iam Rules for support delete images recursive
 ![alt text](https://i.imgur.com/ja43Zup.png)
 ![alt text](https://i.imgur.com/gQBJG1K.png)
 
