@@ -1,6 +1,7 @@
 # GCR Images cleaner with k8s cron 
 
-### Create Service Account Google Cloud
+### Create Service via UI GCP or Terraform, Account Google Cloud + Iam Rules for support delete images recursive
+
 
 
 ### Download service account key json
