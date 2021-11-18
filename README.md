@@ -39,5 +39,13 @@ kubectl apply -f cron-k8s.yaml
 
 - `recursive` - If set to true, will recursively search all child repositories.
 
+### Best practices structure GCR repo
+- create 2 cron for staging and production
+- for prodcution `asia.gcr.io/zeus-14235464232132/production-gcr`
+- for staging `asia.gcr.io/zeus-14235464232132/staging-gcr`
+![alt text](https://i.imgur.com/FRdyiC6.png)
+
+
+
 #### Source tool: https://github.com/GoogleCloudPlatform/gcr-cleaner
 
