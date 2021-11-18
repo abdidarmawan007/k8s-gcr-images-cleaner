@@ -1,0 +1,35 @@
+apiVersion: batch/v1beta1
+kind: CronJob
+metadata:
+  name: production-cron-gcr-cleaner
+  namespace: cronjobs # namespace cronjobs or other namespace
+spec:
+  schedule: "0 1 * * *"  # every day at 1 am
+  failedJobsHistoryLimit: 2
+  successfulJobsHistoryLimit: 1
+  jobTemplate:
+    spec:
+      template:
+        spec:
+          #nodeSelector:
+          #  cloud.google.com/gke-nodepool: pool-production
+          containers:
+          - name: production-cron-gcr-cleaner
+            image: asia.gcr.io/zeus-14235464232132/cron-gcr-cleaner:v8
+            #command:
+            #- /bin/gcrcleaner
+            args:
+            - -repo 
+            - asia.gcr.io/zeus-14235464232132/production-gcr
+            - -allow-tagged
+            - -keep 
+            - "10"
+            - -recursive
+            resources:
+             requests:
+               cpu: "100m"
+               memory: "100Mi"
+             limits:
+               cpu: "800m"
+               memory: "800Mi"
+          restartPolicy: OnFailure
