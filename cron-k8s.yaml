@@ -4,7 +4,7 @@ metadata:
   name: production-cron-gcr-cleaner
   namespace: cronjobs # namespace cronjobs or other namespace
 spec:
-  schedule: "0 1 * * *"  # every day at 1 am
+  schedule: "0 0 * * 0"  # every week 00:00 on Sunday
   failedJobsHistoryLimit: 2
   successfulJobsHistoryLimit: 1
   jobTemplate:
