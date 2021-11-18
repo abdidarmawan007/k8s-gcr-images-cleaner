@@ -27,5 +27,17 @@ docker push asia.gcr.io/zeus-14235464232132/cron-gcr-cleaner:v1
 kubectl apply -f cron-k8s.yaml 
 ```
 
+### Parameters
+- `repo` - Full name of the repository to clean, in the format
+  `gcr.io/project/repo`. This field is required.
+
+- `allow_tagged` - If set to true, will check all images including tagged.
+  If unspecified, the default will only delete untagged images.
+
+- `keep` - If an integer is provided, it will always keep that minimum number
+  of images. Note that it will not consider images inside the `grace` duration.
+
+- `recursive` - If set to true, will recursively search all child repositories.
+
 #### Source tool: https://github.com/GoogleCloudPlatform/gcr-cleaner
 
