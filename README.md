@@ -41,7 +41,7 @@ kubectl apply -f cron-k8s.yaml
 
 ### Best practices structure GCR repo
 - create 2 cron for staging and production
-- run cron stagin every day and run every 1 week for production (we can know on staging if there is an error)
+- run cron staging every day and run every 1 week for production (we can know on staging if there is an error)
 - for prodcution `asia.gcr.io/zeus-14235464232132/production-gcr`
 - for staging `asia.gcr.io/zeus-14235464232132/staging-gcr`
 
